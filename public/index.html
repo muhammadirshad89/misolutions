@@ -6,9 +6,10 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>I.T Solutions Forum</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
+  <meta content="All about I.T. solution total free related microsoft Office, graphics design, web development, mobile app development, flutter, css, html, firebase, javascript, github and online earning training" name="description">
+  <meta content="online,earning,information technology,classes,onlineclasses,flutter,informationtechnology,itsolution,graphics,web,mobileapp,development,reactjs,reactnative,msoffice,photoshop,illustrator" name="keywords">
+  <meta content="Syyed Muhammad Irshad" name="author">
+  <!-- <meta http-equiv="refresh" content="60"> -->
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -25,15 +26,27 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
+
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Vesperr - v4.6.0
-  * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+ 
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    
+    <script>
+      var firebaseConfig = {
+              apiKey: "AIzaSyDTiCWLQuAqe8ACebccqji-fGk_ZnaFGbA",
+              authDomain: "misolution.firebaseapp.com",
+              databaseURL: "https://misolution-default-rtdb.firebaseio.com",
+              projectId: "misolution",
+              storageBucket: "misolution.appspot.com",
+              messagingSenderId: "848827588274",
+              appId: "1:848827588274:web:4b24a14c511950c96fb3ab",
+              measurementId: "G-NCFRN3MY5N"
+      };
+      firebase.initializeApp(firebaseConfig);
+</script>
+
 </head>
 
 <body>
@@ -52,10 +65,10 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="privacypolicy.html">Privacy Policy</a></li>
-          <li><a class="nav-link scrollto " href="articles.html">Articles</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
-          <li><a class="getstarted scrollto" href="index-login.html">Get Started</a></li>
+          <li><a class="nav-link " href="privacypolicy.html">Privacy Policy</a></li>
+          <li><a class="nav-link  " href="/Posts/marketing-blog.html">Make Money</a></li>
+          <li><a class="nav-link " href="Posts/marketing-contact.html">Contact Us</a></li>
+          <li><a class="getstarted " href="index-login.html">Get Started</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -804,25 +817,23 @@
           </div>
 
           <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action method="POST" aria-required="true" class="php-email-form">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                <input type="text"  class="form-control" id="fullname" placeholder="Your Name" required>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                <input type="email" class="form-control"  id="email" placeholder="Your Email" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" id="message" rows="5" placeholder="Message" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
-                <div class="error-message"></div>
+                <!-- <div class="error-message"></div> -->
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center" ><button type="submit" onclick="saveData()">Send Message</button></div>
             </form>
           </div>
 
@@ -872,8 +883,8 @@
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="appfire.js"></script>
 
 </body>
 
