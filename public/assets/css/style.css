@@ -12,6 +12,15 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
+#more {
+  display: none;
+}
+#moree {
+  display: none;
+}
+#moreee {
+  display: none;
+}
 
 a {
   color: #3498db;
